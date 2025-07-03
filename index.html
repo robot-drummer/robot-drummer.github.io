@@ -24,20 +24,15 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
   <script src="static/js/audioPlayer.js" defer></script>
+
+  <!-- LightGallery CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+
+  <!-- LightGallery Core and Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/video/lg-video.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/html/lg-html.min.js"></script>
 </head>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/video/lg-video.min.js"></script>
-
-<script>
-  lightGallery(document.getElementById("video-gallery"), {
-    plugins: [lgVideo],
-    speed: 500
-  });
-</script>
-
-
 
 <body>
 
@@ -171,13 +166,13 @@
 
     <div id="video-gallery" class="columns is-multiline is-mobile is-centered">
       <div class="column is-one-third">
-        <a href="#" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire</h4>" data-html="#video1">
+        <a href="#" data-sub-html="<h4>Jimi Hendrix - Fire</h4>" data-html="#video1">
           <img src="static/figures/thumbnails/fire.jpg" alt="Fire">
         </a>
       </div>
 
       <div class="column is-one-third">
-        <a href="#" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire 2</h4>" data-html="#video2">
+        <a href="#" data-sub-html="<h4>Jimi Hendrix - Fire 2</h4>" data-html="#video2">
           <img src="static/figures/thumbnails/fire2.jpg" alt="Fire 2">
         </a>
       </div>
@@ -188,17 +183,28 @@
 <!-- Hidden video containers -->
 <div style="display: none;">
   <div id="video1">
-    <video class="lg-video-object lg-html5" controls preload="none">
+    <video class="lg-video-object lg-html5" controls preload="none" width="1280" height="720">
       <source src="static/figures/videos/fire.mp4" type="video/mp4">
     </video>
   </div>
 
   <div id="video2">
-    <video class="lg-video-object lg-html5" controls preload="none">
+    <video class="lg-video-object lg-html5" controls preload="none" width="1280" height="720">
       <source src="static/figures/videos/fire2.mp4" type="video/mp4">
     </video>
   </div>
 </div>
+
+<!-- LightGallery Init Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    lightGallery(document.getElementById("video-gallery"), {
+      plugins: [lgVideo, lgHtml],
+      speed: 500
+    });
+  });
+</script>
+
 
 
 <!-- BibTeX -->
