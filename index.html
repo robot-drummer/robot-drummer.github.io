@@ -157,36 +157,36 @@
     </div>
 
     <div id="video-gallery" class="columns is-multiline is-mobile is-centered">
-      <!-- Video 1 -->
       <div class="column is-one-third">
-        <a href="static/figures/videos/fire.mp4" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire</h4>">
+        <a href="#" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire</h4>" data-html="#video1">
           <img src="static/figures/thumbnails/fire.jpg" alt="Fire">
         </a>
       </div>
 
-      <!-- Video 2 -->
       <div class="column is-one-third">
-        <a href="static/figures/videos/fire2.mp4" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire 2</h4>">
+        <a href="#" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire 2</h4>" data-html="#video2">
           <img src="static/figures/thumbnails/fire2.jpg" alt="Fire 2">
         </a>
       </div>
-
-      <!-- Add more videos here -->
     </div>
   </div>
 </section>
 
-<!-- LightGallery Scripts -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/video/lg-video.min.js"></script>
-<script>
-  lightGallery(document.getElementById('video-gallery'), {
-    plugins: [lgVideo],
-    speed: 500,
-    videojs: true
-  });
-</script>
+<!-- Hidden video containers -->
+<div style="display: none;">
+  <div id="video1">
+    <video class="lg-video-object lg-html5" controls preload="none">
+      <source src="static/figures/videos/fire.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div id="video2">
+    <video class="lg-video-object lg-html5" controls preload="none">
+      <source src="static/figures/videos/fire2.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
 
 <!-- BibTeX -->
 <section class="section" id="BibTeX">
