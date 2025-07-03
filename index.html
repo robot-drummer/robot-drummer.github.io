@@ -146,8 +146,8 @@
   </div>
 </section>
 
-<!-- Performance Section -->
-<section class="section hero is-light">
+<!-- Video Performance Gallery -->
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -155,64 +155,38 @@
         <p>Performance of our RL agent in playing songs</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Results Carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        
-        <!-- Fire -->
-        <div class="column is-centered has-text-centered">
-          <p><b>“Jimi Hendrix - Fire”</b></p>
-          <video poster="" id="tree" autoplay controls muted loop height="100%">
-            <source src="static/figures/videos/fire.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <!-- Fire -->
-        <div class="column is-centered has-text-centered">
-          <p><b>“Jimi Hendrix - Fire 2”</b></p>
-          <video poster="" id="tree" autoplay controls muted loop height="100%">
-            <source src="static/figures/videos/fire.mp4" type="video/mp4">
-          </video>
-        </div>
-
+    <div id="video-gallery" class="columns is-multiline is-mobile is-centered">
+      <!-- Video 1 -->
+      <div class="column is-one-third">
+        <a href="static/figures/videos/fire.mp4" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire</h4>">
+          <img src="static/figures/thumbnails/fire.jpg" alt="Fire">
+        </a>
       </div>
+
+      <!-- Video 2 -->
+      <div class="column is-one-third">
+        <a href="static/figures/videos/fire2.mp4" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire 2</h4>">
+          <img src="static/figures/thumbnails/fire2.jpg" alt="Fire 2">
+        </a>
+      </div>
+
+      <!-- Add more videos here -->
     </div>
   </div>
 </section>
 
-
-<!-- Gallery container -->
-<div id="video-gallery" class="video-gallery">
-  <a href="static/figures/videos/fire.mp4" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire</h4>">
-    <img src="static/figures/thumbnails/fire.jpg" />
-  </a>
-
-  <a href="static/figures/videos/fire2.mp4" data-lg-size="1280-720" data-sub-html="<h4>Jimi Hendrix - Fire 2</h4>">
-    <img src="static/figures/thumbnails/fire2.jpg" />
-  </a>
-
-  <!-- Repeat for 20-30 videos -->
-</div>
-
-<!-- LightGallery CSS and JS -->
+<!-- LightGallery Scripts -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/video/lg-video.min.js"></script>
-
 <script>
   lightGallery(document.getElementById('video-gallery'), {
     plugins: [lgVideo],
-    licenseKey: '0000-0000-000-0000',
     speed: 500,
     videojs: true
   });
 </script>
-
 
 <!-- BibTeX -->
 <section class="section" id="BibTeX">
